@@ -1,43 +1,28 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
+import 'Pantallas1060/panel1060/Panel_Pantalla1060.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(Myiplay());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Myiplay extends StatelessWidget {
+  const Myiplay({super.key});
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       // Application name
-      title: 'Flutter Hello World',
+      title: 'iCescMusic',
       // Application theme data, you can set the colors for the application as
       // you want
       theme: ThemeData(
-        // useMaterial3: false,
-        primarySwatch: Colors.blue,
-      ),
+          // useMaterial3: false,
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurpleAccent),
+          useMaterial3: true),
+      home: Panel_Pantalla1060(),
+
       // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({super.key, required this.title});  
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
-        ),
-      ),
     );
   }
 }
